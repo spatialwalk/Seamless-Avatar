@@ -3,7 +3,10 @@
 A project for generating seamless dyadic interaction avatars.
 
 ---
+video demo
+## 🎬 Video Demo
 
+<video src="assets/demo.mp4" controls="controls" width="500" height="300"></video>
 ## 🛠️ Environment Setup
 
 Set up Hugging Face mirror for faster model downloads:
