@@ -65,8 +65,8 @@ torchrun --nproc_per_node=6 -m train_dit
 
 ### 📉 Training Loss Curve ([Swanlab](https://swanlab.cn/))
 
-DiT[Gesture] train loss curve on Swanlab:
-[![Swanlab Chart](assets/image.png)](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart)
+DiT[Gesture] loss curve:
+![Swanlab Chart](assets/image.png)
 
 
 click the following link to view the full training curve log:
