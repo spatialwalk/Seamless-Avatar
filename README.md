@@ -2,11 +2,12 @@
 
 A project for generating seamless dyadic interaction avatars.
 
----
-video demo
 ## 🎬 Video Demo
 
+> 🔊 **Note:** Click the speaker icon in the player to enable audio.
+
 https://github.com/user-attachments/assets/5b7ac064-9d28-4e2c-b435-5aa6c7cd3457
+
 
 ## 🛠️ Environment Setup
 
