@@ -4,18 +4,13 @@ A project for generating seamless dyadic interaction avatars.
 
 ## 🎬 Video Demo
 
-> 🔊 **Note:** Click the speaker icon in the player to enable audio.
 
-https://github.com/user-attachments/assets/5b7ac064-9d28-4e2c-b435-5aa6c7cd3457
+https://github.com/user-attachments/assets/054f66d2-7aa9-4510-8353-f51edabf147b
+> 🔊 **Note:** Click the speaker icon in the player to enable audio.
 
 
 ## 🛠️ Environment Setup
 
-Set up Hugging Face mirror for faster model downloads:
-
-```bash
-export HF_ENDPOINT=https://hf-mirror.com
-```
 
 ### Installation Steps
 
@@ -32,11 +27,14 @@ apt-get install ninja-build
 pip install git+https://github.com/NVlabs/nvdiffrast.git
 pip install -r requirements.txt
 
-# Set Hugging Face mirror again
+```
+
+Set up Hugging Face mirror for faster model/dataset downloads if you are in a region with slow access to Hugging Face:
+
+```bash
 export HF_ENDPOINT=https://hf-mirror.com
 ```
 
----
 
 ## 📁 Data Preparation
 
@@ -46,7 +44,7 @@ python -m src.data_preprocess.compute_stats
 python -m src.data_preprocess.generate_splits
 ```
 
----
+
 
 ## 🚀 Training
 
@@ -77,7 +75,7 @@ click the following link to view the full training curve log:
 
 - 👉  [DiT[Gesture]](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart)
 
----
+
 
 ## 🧪 Inference
 
@@ -85,7 +83,7 @@ click the following link to view the full training curve log:
 python -m src.motion_detokenizer.infer_dit
 ```
 
----
+
 
 ## 📊 Metrics
 

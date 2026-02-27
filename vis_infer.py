@@ -22,8 +22,8 @@ def vis_infer(pred_npz_folder, save_video_folder, text_list):
         label = os.path.dirname(pred_npz_path).split('/')[-1]
         audio_path = os.path.join(
             AUDIOS_FOLDER,
-            label+'_loudnorm_16k',
-            os.path.basename(pred_npz_path).replace('_smplx.npz', '.wav'))
+            label,
+            os.path.basename(pred_npz_path).replace('.npz', '.wav'))
         gt_npz_path = os.path.join(
             SMPLX_NPZ_FOLDER, os.path.relpath(pred_npz_path, pred_npz_folder))
 
