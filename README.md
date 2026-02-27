@@ -67,15 +67,11 @@ DiT[Gesture] loss curve:
 ![Swanlab Chart](assets/image.png)
 
 
-click the following link to view the full training curve log:
-
-- 👉  [DiT[Gesture]](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart)
-
-- 👉  [DiT[Expression]](https://swanlab.cn/@gjj/Seamless-Avatar/runs/wjz3q1c942rw57e3h01yw/chart)
-
-- 👉  [DiT[Gesture]](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart)
-
-
+More Training Info:
+| Model         | Training Duration      | GPUs         | Checkpoint         |  Full Training Log         |
+|---------------|--------------|--------------|--------------------|--------------------|
+| DiT[Gesture]  | 13 hours      | 6 RTX4090    | epoch420          | 👉  [DiT[Gesture] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart) |
+| DiT[Expression]| 15 hours     | 6 RTX4090    | epoch500           | 👉  [DiT[Expression] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/wjz3q1c942rw57e3h01yw/chart) | 
 
 ## 🧪 Inference
 

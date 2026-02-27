@@ -30,20 +30,20 @@ def main():
     exp_name_prefix = 'DiT_0107'
     motion_type = 'hands'  # expression, gesture, hands
 
-    DEBUG = True
+    DEBUG = False
 
     # ----------------------------
 
     exp_name = f'{exp_name_prefix}_{motion_type}'
-    ddp_args = init_distributed(use_ddp=False)
+    ddp_args = init_distributed(use_ddp=True)
 
     # If use_swanlab=True, you will be required to log in SwanLab when running the code, and the logs will be uploaded to SwanLab.
     # swanlab is a simliar tool like wandb, and its website is https://swanlab.cn/
-    logger = get_logger(use_swanlab=False, exp_name=exp_name)
+    logger = get_logger(use_swanlab=True, exp_name=exp_name)
 
     # -----------------------------
-    batch_size = 2  # 32
-    num_workers = 1  # 4
+    batch_size = 32  # 32
+    num_workers = 4  # 4
     train_dataset = MotionDataset(
         split='train',
         debug=DEBUG,
