@@ -70,8 +70,9 @@ DiT[Gesture] loss curve:
 More Training Info:
 | Model         | Training Duration      | GPUs         | Checkpoint         |  Full Training Log         |
 |---------------|--------------|--------------|--------------------|--------------------|
-| DiT[Gesture]  | 13 hours      | 6 RTX4090    | epoch420          | 👉  [DiT[Gesture] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart) |
-| DiT[Expression]| 15 hours     | 6 RTX4090    | epoch500           | 👉  [DiT[Expression] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/wjz3q1c942rw57e3h01yw/chart) | 
+| DiT[Gesture]  | 13 hours      | 6 RTX4090    | [epoch420](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_gesture.pt?download=true)          | 👉  [DiT[Gesture] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart) |
+| DiT[Expression]| 15 hours     | 6 RTX4090    | [epoch500](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_expression.pt?download=true)           | 👉  [DiT[Expression] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/wjz3q1c942rw57e3h01yw/chart) | 
+
 
 ## 🧪 Inference
 
