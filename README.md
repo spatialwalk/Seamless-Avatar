@@ -15,6 +15,7 @@ https://github.com/user-attachments/assets/02828e1c-31f0-40ad-b9d0-35eab7519f42
 ### Installation Steps
 
 ```shell
+# Clone the repository
 git clone https://github.com/spatialwalk/Seamless-Avatar.git
 cd Seamless-Avatar/
 
@@ -32,24 +33,33 @@ pip install git+https://github.com/NVlabs/nvdiffrast.git --no-build-isolation
 
 ```
 
-Set up Hugging Face mirror for faster model/dataset downloads if you are in a region with slow access to Hugging Face:
+
+## 📁 Download Dataset and Pre-trained Models
+```shell
+# Install aria2 for faster downloads
+apt install aria2
+chmod a+x scripts/hfd.sh
+
+# Set up Hugging Face mirror for faster model/dataset downloads if you are in a region with slow access to Hugging Face:
+# export HF_ENDPOINT=https://hf-mirror.com
+
+# Download the dataset
+./scripts/download_dataset.sh
+
+# download pre-trained models
+./scripts/hfd.sh xwshi/Seamless-Avatar-Smplx-Model --local-dir models/pretrained_models
+
+# download smplx model
+./scripts/download_smplx.sh
+```
+
+
+## 🧪 Inference
 
 ```bash
-export HF_ENDPOINT=https://hf-mirror.com
+python infer_dit.py # audio --> npz
+python vis_infer.py # npz --> video
 ```
-
-
-## 📁 Download Dataset
-```shell
-chmod a+x scripts/hfd.sh
-./hfd.sh xwshi/Seamless-Avatar-Smplx-150h --dataset --exclude "flame_npz_annos.tar"
-
-
-```
-
-
-
-
 
 
 ## 🚀 Training
@@ -57,7 +67,7 @@ chmod a+x scripts/hfd.sh
 ### Single GPU Training
 
 ```bash
-python -m train_dit
+python train_dit.py
 ```
 
 ### Multi-GPU Distributed Training
@@ -67,7 +77,7 @@ torchrun --nproc_per_node=6 -m train_dit
 ```
 
 
-### 📉 Training Loss Curve ([Swanlab](https://swanlab.cn/))
+## 📉 Training Loss Curve ([Swanlab](https://swanlab.cn/))
 
 DiT[Gesture] loss curve:
 ![Swanlab Chart](assets/image.png)
@@ -81,11 +91,7 @@ More Training Info:
 | DiT[Hands]| 15 hours     | 6 RTX4090    | [epoch500](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_hands.pt?download=true)           | 👉  [Full Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/g5yme25i9ivn8o55po3di/chart) | 
 
 
-## 🧪 Inference
 
-```bash
-python -m src.motion_detokenizer.infer_dit
-```
 
 
 
