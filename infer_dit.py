@@ -21,7 +21,7 @@ if __name__ == '__main__':
     dit_ckpt_path_map = {
         'gesture': f'models/pretrained_models/DiT_gesture.pt',
         'expression': f'models/pretrained_models/DiT_expression.pt',
-        # 'hands': f'outputs/DiT_0107_hands/checkpoints/340.pt'
+        'hands': f'outputs/DiT_0107_hands/checkpoints/500.pt',
     }
 
     motion_type_list = list(dit_ckpt_path_map.keys())

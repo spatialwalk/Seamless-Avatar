@@ -5,7 +5,7 @@ A project for generating seamless dyadic interaction avatars.
 ## 🎬 Video Demo
 
 
-https://github.com/user-attachments/assets/054f66d2-7aa9-4510-8353-f51edabf147b
+https://github.com/user-attachments/assets/02828e1c-31f0-40ad-b9d0-35eab7519f42
 > 🔊 **Note:** Click the speaker icon in the player to enable audio.
 
 
@@ -68,10 +68,11 @@ DiT[Gesture] loss curve:
 
 
 More Training Info:
-| Model         | Training Duration      | GPUs         | Checkpoint         |  Full Training Log         |
+| Model         | Training Duration      | GPUs         | Checkpoint         |  Training Log         |
 |---------------|--------------|--------------|--------------------|--------------------|
-| DiT[Gesture]  | 13 hours      | 6 RTX4090    | [epoch420](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_gesture.pt?download=true)          | 👉  [DiT[Gesture] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart) |
-| DiT[Expression]| 15 hours     | 6 RTX4090    | [epoch500](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_expression.pt?download=true)           | 👉  [DiT[Expression] Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/wjz3q1c942rw57e3h01yw/chart) | 
+| DiT[Gesture]  | 13 hours      | 6 RTX4090    | [epoch420](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_gesture.pt?download=true)          | 👉  [Full Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/6t4cimbag950wmqmwip44/chart) |
+| DiT[Expression]| 15 hours     | 6 RTX4090    | [epoch500](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_expression.pt?download=true)           | 👉  [Full Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/wjz3q1c942rw57e3h01yw/chart) | 
+| DiT[Hands]| 15 hours     | 6 RTX4090    | [epoch500](https://huggingface.co/xwshi/Seamless-Avatar-Smplx-Model/resolve/main/DiT_hands.pt?download=true)           | 👉  [Full Log](https://swanlab.cn/@gjj/Seamless-Avatar/runs/g5yme25i9ivn8o55po3di/chart) | 
 
 
 ## 🧪 Inference
