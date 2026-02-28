@@ -51,6 +51,7 @@ bash ./scripts/hfd.sh xwshi/Seamless-Avatar-Smplx-Model --local-dir models/pretr
 
 # download smplx model
 bash ./scripts/download_smplx.sh
+
 ```
 
 
