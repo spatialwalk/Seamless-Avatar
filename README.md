@@ -44,13 +44,13 @@ chmod a+x scripts/hfd.sh
 # export HF_ENDPOINT=https://hf-mirror.com
 
 # Download the dataset
-./scripts/download_dataset.sh
+bash ./scripts/download_dataset.sh
 
 # download pre-trained models
-./scripts/hfd.sh xwshi/Seamless-Avatar-Smplx-Model --local-dir models/pretrained_models
+bash ./scripts/hfd.sh xwshi/Seamless-Avatar-Smplx-Model --local-dir models/pretrained_models
 
 # download smplx model
-./scripts/download_smplx.sh
+bash ./scripts/download_smplx.sh
 ```
 
 

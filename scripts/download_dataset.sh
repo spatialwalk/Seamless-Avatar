@@ -6,5 +6,5 @@ DATASET_ROOT=./datasets/seamless_smplx_dataset
 # extract the dataset
 for tar_file in $DATASET_ROOT/*.tar; do
     echo "Extracting $tar_file..."
-    tar -xvf "$tar_file" -C "$DATASET_ROOT" && echo "Extracted $tar_file successfully." && rm "$tar_file"
+    tar -xf "$tar_file" -C "$DATASET_ROOT" && echo "Extracted $tar_file successfully." && rm "$tar_file"
 done
