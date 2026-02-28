@@ -14,7 +14,9 @@ https://github.com/user-attachments/assets/02828e1c-31f0-40ad-b9d0-35eab7519f42
 
 ### Installation Steps
 
-```bash
+```shell
+git clone https://github.com/spatialwalk/Seamless-Avatar.git
+
 # Create Conda environment
 conda create -n seamless-avatar python=3.10
 conda activate seamless-avatar
