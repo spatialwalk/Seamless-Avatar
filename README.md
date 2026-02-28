@@ -16,6 +16,7 @@ https://github.com/user-attachments/assets/02828e1c-31f0-40ad-b9d0-35eab7519f42
 
 ```shell
 git clone https://github.com/spatialwalk/Seamless-Avatar.git
+cd Seamless-Avatar/
 
 # Create Conda environment
 conda create -n seamless-avatar python=3.10
@@ -26,8 +27,8 @@ apt-get update && apt-get install -y ffmpeg
 apt-get install ninja-build
 
 # Install Python dependencies
-pip install git+https://github.com/NVlabs/nvdiffrast.git
 pip install -r requirements.txt
+pip install git+https://github.com/NVlabs/nvdiffrast.git
 
 ```
 
@@ -38,13 +39,16 @@ export HF_ENDPOINT=https://hf-mirror.com
 ```
 
 
-## 📁 Data Preparation
+## 📁 Download Dataset
+```shell
+chmod a+x scripts/hfd.sh
+./hfd.sh xwshi/Seamless-Avatar-Smplx-150h --dataset --exclude "flame_npz_annos.tar"
 
-```bash
-python -m src.data_preprocess.extract_tar_and_remove
-python -m src.data_preprocess.compute_stats
-python -m src.data_preprocess.generate_splits
+
 ```
+
+
+
 
 
 
