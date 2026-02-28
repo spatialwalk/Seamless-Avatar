@@ -28,7 +28,7 @@ apt-get install ninja-build
 
 # Install Python dependencies
 pip install -r requirements.txt
-pip install git+https://github.com/NVlabs/nvdiffrast.git
+pip install git+https://github.com/NVlabs/nvdiffrast.git --no-build-isolation
 
 ```
 
