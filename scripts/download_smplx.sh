@@ -1,4 +1,9 @@
-echo -e "\nIf you do not have an account you can register at https://smpl-x.is.tue.mpg.de/following the installation instruction."
+urle () { [[ "${1}" ]] || return 1; local LANG=C i x; for (( i = 0; i < ${#1}; i++ )); do x="${1:i:1}"; [[ "${x}" == [a-zA-Z0-9.~-] ]] && echo -n "${x}" || printf '%%%02X' "'${x}"; done; echo; }
+COLOR='\033[0;32m'
+
+username and password input
+
+echo -e "\nIf you do not have an account you can register at https://smpl-x.is.tue.mpg.de/ following the installation instruction."
 read -p "Username (smpl-x):" username
 read -p "Password (smpl-x):" password
 username=$(urle $username)
