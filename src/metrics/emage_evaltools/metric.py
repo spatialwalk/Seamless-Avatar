@@ -371,7 +371,7 @@ class FGD(object):
         args = Arg()
         # Assumes LocalEncoder is defined elsewhere
         self.eval_model = VAESKConv(args, model_save_path=download_path)
-        old_stat = torch.load(os.path.join(download_path, "AESKConv_240_100.bin"))[
+        old_stat = torch.load(os.path.join(download_path, "AESKConv_240_100.bin"),weights_only=False)[
             "model_state"]
         new_stat = {}
         for k, v in old_stat.items():
