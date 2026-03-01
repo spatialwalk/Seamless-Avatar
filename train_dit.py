@@ -29,13 +29,11 @@ def main():
 
     # -----------------------------
     seed_everything(42)
-    
+
     # sys.arg1
     motion_type = sys.argv[1]  # expression, gesture, hands
     ic(motion_type)
-    exit()
-    
-    
+
     exp_name_prefix = 'DiT_0107'
 
     DEBUG = False
