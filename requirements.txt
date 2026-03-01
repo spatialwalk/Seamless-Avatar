@@ -14,6 +14,7 @@ peft
 termcolor
 pandas
 matplotlib
+wget
 # welford_torch
 # onnxruntime
 # openai-whisper
