@@ -1,3 +1,4 @@
+mkdir -p models/smplx
 wget https://huggingface.co/lilpotat/pytorch3d/resolve/main/SMPLX_NEUTRAL_2020.npz -O models/smplx/SMPLX_NEUTRAL_2020.npz
 
 

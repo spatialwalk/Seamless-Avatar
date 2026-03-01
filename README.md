@@ -20,7 +20,7 @@ git clone https://github.com/spatialwalk/Seamless-Avatar.git
 cd Seamless-Avatar/
 
 # Create Conda environment
-conda create -n seamless-avatar python=3.10
+conda create -n seamless-avatar python=3.10 -y
 conda activate seamless-avatar
 
 # Install system dependencies
@@ -37,7 +37,7 @@ pip install git+https://github.com/NVlabs/nvdiffrast.git --no-build-isolation
 ## 📁 Download Dataset and Pre-trained Models
 ```shell
 # Install aria2 for faster downloads
-apt install aria2
+apt install aria2 -y
 chmod a+x scripts/hfd.sh
 
 # Set up Hugging Face mirror for faster model/dataset downloads if you are in a region with slow access to Hugging Face:
