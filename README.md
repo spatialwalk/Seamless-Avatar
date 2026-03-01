@@ -51,7 +51,7 @@ bash ./scripts/hfd.sh xwshi/Seamless-Avatar-Smplx-Model --local-dir models/pretr
 
 # download smplx model
 bash ./scripts/download_smplx.sh
-
+ln -s models/smplx/SMPLX_NEUTRAL_2020.npz ./src/metrics/emage_evaltools/smplx_models/smplx/ # this is for metric evaluation
 ```
 
 
@@ -61,6 +61,26 @@ bash ./scripts/download_smplx.sh
 python infer_dit.py # audio --> npz
 python vis_infer.py # npz --> video
 ```
+
+
+## 📊 Metrics
+
+```bash
+python -m src.metrics.emage_metric
+```
+
+### Example Results
+
+```
+====================================================================================================
+Summary Table
+====================================================================================================
+                                     FGD ↓     L1div ↑       LVD ↓       MSE ↓        BC ↓
+----------------------------------------------------------------------------------------------------
+DiT_holistic_pred_0108_v1         5.64e-01    8.74e+00    4.12e-05    1.30e-06    4.64e-01
+====================================================================================================
+```
+
 
 
 ## 🚀 Training
@@ -95,22 +115,4 @@ More Training Info:
 
 
 
-
-## 📊 Metrics
-
-```bash
-python -m src.metrics.emage_metric
-```
-
-### Example Results
-
-```
-====================================================================================================
-Summary Table
-====================================================================================================
-                                     FGD ↓     L1div ↑       LVD ↓       MSE ↓
-----------------------------------------------------------------------------------------------------
-DiT_holistic_pred_0108_v1         9.47e-01    5.63e+00    3.91e-05    1.24e-06
-====================================================================================================
-```
 

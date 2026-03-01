@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     pred_npz_folder = f'./outputs/DiT_holistic_pred_0108_v1'
 
-    DEBUG = True
+    DEBUG = False
     infer_split = 'test'
 
     dit_ckpt_path_map = {
@@ -112,5 +112,5 @@ if __name__ == '__main__':
         )
         ic(save_npz_path_pred)
 
-        torch.cuda.empty_cache()
-        gc.collect()
+        # torch.cuda.empty_cache()
+        # gc.collect()

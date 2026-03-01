@@ -183,7 +183,6 @@ class BC(object):
         # print(vel.shape) # T*J
 
         beat_vel_all = []
-        ic(vel.shape)
         for i in range(vel.shape[1]):
             vel_mask = np.where(vel[:, i] > self.threshold)
             beat_vel = argrelextrema(
@@ -311,7 +310,7 @@ class BC(object):
             motion_position, pose_fps=pose_fps, without_file=True)
         onset_bt_rms = self.load_audio(audio_path)
 
-        self.m_plot(beat_vel, vel, onset_bt_rms, pose_fps)
+        # self.m_plot(beat_vel, vel, onset_bt_rms, pose_fps)
 
         avg_dis_all_b2a_list = []
         for its, beat_vel_each in enumerate(beat_vel):

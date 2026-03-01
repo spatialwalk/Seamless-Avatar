@@ -29,7 +29,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 download_path = os.path.join(os.path.dirname(__file__), 'emage_evaltools')
 
 fgd_evaluator = FGD(download_path=download_path)
-bc_evaluator = BC(download_path=download_path, sigma=0.3, order=7,threshold=0.02)
+bc_evaluator = BC(download_path=download_path,
+                  sigma=0.3, order=7, threshold=0.02)
 l1div_evaluator = L1div()
 lvd_evaluator = LVDFace()
 mse_evaluator = MSEFace()
@@ -179,7 +180,7 @@ def compute_metrics(pred_folder, gt_folder, file_short_path_list,  debug):
 
     # -------------- load data -------------------
     pred_npz_path_list = [
-        os.path.join(pred_folder,  item+'_smplx.npz')
+        os.path.join(pred_folder,  item+'.npz')
         for item in file_short_path_list
     ]
     if debug:
@@ -195,8 +196,8 @@ def compute_metrics(pred_folder, gt_folder, file_short_path_list,  debug):
         label = os.path.dirname(gt_npz_path).split('/')[-1]
         audio_path = os.path.join(
             AUDIOS_FOLDER,
-            label+'_loudnorm_16k',
-            os.path.basename(gt_npz_path).replace('_smplx.npz', '.wav')
+            label,
+            os.path.basename(gt_npz_path).replace('.npz', '.wav')
         )
 
         motion_pred, expressions_pred = load_npz_for_metric(pred_npz_path)
@@ -227,11 +228,9 @@ def compute_metrics(pred_folder, gt_folder, file_short_path_list,  debug):
         mse_evaluator.compute(face_position_pred, face_position_gt)
 
         # -------------- compute bc -------------------
-        # bc_evaluator.compute(motion_position_pred.cpu().numpy(), audio_path, pose_fps=30)
-        # bc_evaluator.compute(motion_pred, audio_path, pose_fps=30)
-
-        # print(bc_evaluator.avg())
-        # exit()
+        bc_evaluator.compute(
+            motion_position_pred.cpu().numpy(), audio_path, pose_fps=30)
+        bc_evaluator.compute(motion_pred, audio_path, pose_fps=30)
 
         # -------------- compute fgd -------------------
         motion_pred = torch.from_numpy(motion_pred).to(device).unsqueeze(0)
@@ -251,7 +250,7 @@ def compute_metrics(pred_folder, gt_folder, file_short_path_list,  debug):
         'L1div': l1div_evaluator.avg(),
         'LVD': lvd_evaluator.avg(),
         'MSE':  mse_evaluator.avg(),
-        # 'BC': 0,
+        'BC': bc_evaluator.avg(),
     }
 
 
@@ -323,13 +322,12 @@ if __name__ == "__main__":
 
     # -------------- load data -------------------
     dit_pred_folder = 'outputs/DiT_holistic_pred_0108_v1'
-    vqvae_recon_folder = 'outputs/vqvae_holistic_pred_0107'
 
     gt_folder = SMPLX_NPZ_FOLDER
     pred_folder_list = [
         # gt_folder,
         dit_pred_folder,
-        vqvae_recon_folder
+
     ]
 
     metric_name_direction_map = {
