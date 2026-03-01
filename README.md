@@ -88,13 +88,17 @@ DiT_holistic_pred_0108_v1         5.64e-01    8.74e+00    4.12e-05    1.30e-06  
 ### Single GPU Training
 
 ```bash
-python train_dit.py
+python train_dit.py expression
+python train_dit.py gesture
+python train_dit.py hands
 ```
 
 ### Multi-GPU Distributed Training
 
 ```bash
-torchrun --nproc_per_node=6 -m train_dit
+torchrun --nproc_per_node=6 -m train_dit expression
+torchrun --nproc_per_node=6 -m train_dit gesture
+torchrun --nproc_per_node=6 -m train_dit hands
 ```
 
 

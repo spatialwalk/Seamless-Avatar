@@ -1,4 +1,6 @@
 
+import sys
+
 import torch
 import torch.nn as nn
 from utils.util_func import seed_everything
@@ -27,8 +29,14 @@ def main():
 
     # -----------------------------
     seed_everything(42)
+    
+    # sys.arg1
+    motion_type = sys.argv[1]  # expression, gesture, hands
+    ic(motion_type)
+    exit()
+    
+    
     exp_name_prefix = 'DiT_0107'
-    motion_type = 'hands'  # expression, gesture, hands
 
     DEBUG = False
 
@@ -39,7 +47,7 @@ def main():
 
     # If use_swanlab=True, you will be required to log in SwanLab when running the code, and the logs will be uploaded to SwanLab.
     # swanlab is a simliar tool like wandb, and its website is https://swanlab.cn/
-    logger = get_logger(use_swanlab=True, exp_name=exp_name)
+    logger = get_logger(use_swanlab=False, exp_name=exp_name)
 
     # -----------------------------
     batch_size = 32  # 32
