@@ -129,8 +129,8 @@ class BC(object):
                     "https://huggingface.co/spaces/H-Liu1997/EMAGE/resolve/main/EMAGE/test_sequences/weights/mean_vel_smplxflame_30.npy",
                     model_file_path,
                 )
-        self.mmae = np.load(os.path.join(
-            download_path, "mean_vel_smplxflame_30.npy")) if download_path is not None else None
+        # self.mmae = np.load(os.path.join(
+        #     download_path, "mean_vel_smplxflame_30.npy")) if download_path is not None else None
         self.mmae = None
         self.threshold = threshold
         self.counter = 0
